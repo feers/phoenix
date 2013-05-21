@@ -167,7 +167,7 @@ function CreateDrawingAttachment($id_drawing,$name,$filename,$path,$size){
     VALUES ('{$id_drawing}','{$name}','{$filename}','{$path}','{$size}','{$regdate}','{$regdate}')";
     DataBaseConnection($query);          
 }
-//Создание Прхода
+//Создание Прихода
 function CreateIncoming($id_building,$id_drawing,$type,$name,$amount,$incoming_date){
     require_once 'db.php';
     $regdate = date("Y-m-d H:i:s");    
