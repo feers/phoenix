@@ -1,0 +1,23 @@
+<!-- BEGIN:body -->
+<body>
+<div id="body">
+    <div id="leftPan">
+        <!-- BEGIN:news -->
+        <h2 class="duty">{news_title}</h2>
+        <p class="duty_news_date">Дата публикации</br>{news_date}</p>  
+        <p class="duty_news">{news_text}</p>   
+        <p class="more_news"></p>
+        <!-- END:news -->
+        <!-- BEGIN:news_can -->
+        <p class="news"><a href="/news.php?news=all">Показать все новости</a></p>
+        <!-- END:news_can -->        
+        <!-- BEGIN:create -->        
+        <form class="change" action="forms.php" method="post">
+        <input type="hidden" name="form_name" value="{form_name}"/>
+        <input type="submit" name="{form_name}" value='{button_name}'/>
+        </form>  
+        <!-- END:create -->        
+    </div>
+    <br class="spacer" />
+</div>
+<!-- END:body -->

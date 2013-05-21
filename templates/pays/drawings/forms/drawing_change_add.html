@@ -1,0 +1,41 @@
+<!-- BEGIN:body -->
+<body>
+<div id="body">
+    <script>
+	$(function() {
+		var dates = $( "#from, #to" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 3,
+			onSelect: function( selectedDate ) {
+				var option = this.id == "from" ? "minDate" : "maxDate",
+					instance = $( this ).data( "datepicker" ),
+					date = $.datepicker.parseDate(
+						instance.settings.dateFormat ||
+						$.datepicker._defaults.dateFormat,
+						selectedDate, instance.settings );
+				dates.not( this ).datepicker( "option", option, date );
+			}
+		});
+	});
+	</script>
+    <div id="leftPan"> 
+        <form action="functions/controls.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="{form_name}"/>
+            <p class="change">Название Выписки:</p>
+            <p class="change"><input type="text" size="60" required name="drawing_name" placeholder='Выписка за Март 2012' value='{document_name}'/></p>        
+            <p class="change">Начальная Дата Выписки:</p>
+            <p class="change"><input id="from" type="text" size="30" required maxlength="10" placeholder='01.01.2012' pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" name="drawing_start_date" value='{drawing_start_date}'/></p>
+            <p class="change">Конечная Дата Выписки:</p>
+            <p class="change"><input id="to" type="text" size="30" required maxlength="10" placeholder='01.02.2012' pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" name="drawing_end_date" value='{drawing_end_date}'/></p>
+            <p class="change">Путь к файлу:</p>
+            <p class="change"><input type="file" size="60" required accept="image" name="drawing"/></p>            
+            </br>
+            <p><input type="submit" name="{button_to_control}" value="{button_name}"/></p> 
+        </form>
+        <p><input class="sea" type="button" onclick="history.back()" value="Назад"/></p>
+    </div>
+    <br class="spacer" />
+</div>
+<!-- END:body -->
+

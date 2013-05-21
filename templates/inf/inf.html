@@ -1,0 +1,49 @@
+<!-- BEGIN:body -->
+<body>
+<div id="body">
+    <div id="leftPan">
+        <h2 class="duty">{title}</h2>
+        <p class="contragent"><b>Улица:</b>{street_name}</p>  
+        <p class="contragent"><b>Номер Дома:</b>{building_number}</p>  
+        <p class="contragent"><b>Кол-во квартир:</b>{building_appartments}</p>
+        
+        <!-- BEGIN:tsj_admin_can -->        
+        <h2 class="duty">{title_tsj}</h2>
+        <!-- END:tsj_admin_can -->     
+        
+        <!-- BEGIN:tsj_admin -->        
+        <p class="more_news"></p>
+        <p class="contragent"><b>ФИО:</b>{user_last} {user_first} {user_third}</p>
+        <p class="contragent"><b>Должность:</b>{post}</p>
+        <p class="contragent"><b>№ Квартиры:</b>{appartment_number}</p>
+        <p class="contragent"><b>Телефон 1:</b>{user_phone1}</p>
+        <p class="contragent"><b>Телефон 2:</b>{user_phone2}</p>
+        <p class="more_news"></p>
+        <!-- END:tsj_admin -->        
+        
+        <!-- BEGIN:documents_can -->    
+        <script>
+        $(document).ready(function(){
+            $('.colorbox').colorbox();
+        });
+        </script>
+        <h2 class="duty">{title_documents}</h2>
+        <!-- END:documents_can --> 
+        
+        <!-- BEGIN:documents -->    
+        <p class="contragent"><a class="colorbox" title="{doc_name}" href="{doc_path}{doc_filename}"><b>{doc_name}</b>
+            <img src="{doc_path}{doc_filename}" alt="{doc_name}" width="100"/></a></p> 
+        <p class="more_news"></p>
+        <!-- END:documents --> 
+        
+        <!-- BEGIN:create -->        
+        <form class="change" action="forms.php" method="post">
+        <input type="hidden" name="form_name" value="{form_name}"/>
+        <p><input type="submit" name="{form_name}" value='{button_name}'/></p>
+        </form>  
+        <!-- END:create -->   
+        
+    </div>
+    <br class="spacer" />
+</div>
+<!-- END:body -->

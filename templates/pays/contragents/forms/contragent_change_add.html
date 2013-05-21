@@ -1,0 +1,41 @@
+<!-- BEGIN:body -->
+<body>
+<div id="body">
+    <div id="leftPan"> 
+        <form action="functions/controls.php" method="post">
+            <input type="hidden" name="{form_name}"/>
+            <p class="change"><input type="hidden" name="contragent_id" value='{contr_id}'/></p>
+            <p class="change"><input type="hidden" name="building_id" value='{building_id}'/></p>
+            <p class="change">Наименование контрагента:</p>
+            <p class="change"><input type="text" size="30" required name="contragent_name" placeholder='ООО "Контрагент"' value='{contr_name}'/></p>
+            <p class="change">Тип контрагента:</p>
+            <p class="change"><input {checked1} type="radio" name="contragent_type" value="1"/>Коммунальное предприятие</p>
+            <p class="change"><input {checked2} type="radio" name="contragent_type" value="2"/>Не коммунальное предприятие</p>
+            <p class="change">ИНН:</p>
+            <p class="change"><input type="text" size="30" required placeholder='ИНН' name="contragent_inn" value='{contr_inn}'/></p>
+            <p class="change">КПП:</p>
+            <p class="change"><input type="text" size="30" required placeholder='КПП' name="contragent_kpp" value='{contr_kpp}'/></p>
+            <p class="change">Юридический адрес:</p>
+            <p class="change"><textarea cols="30" rows="4" placeholder='Юридический адрес' name="contragent_yur">{contr_yur}</textarea></p>
+            <p class="change">Фактический адрес:</p>
+            <p class="change"><textarea cols="30" rows="4"  name="contragent_fact">{contr_fact}</textarea></p>
+            <p class="change">e-mail:</p>
+            <p class="change"><input type="email" size="30" required placeholder='yourmail@mail.ru' pattern="[-0-9a-z_\.]+@[-0-9a-z_^\.]+\.[a-z]{2,6}" name="contragent_email" value='{contr_email}'/></p>
+            <p class="change">Номер счета:</p>
+            <p class="change"><input type="text" size="30" required placeholder='Номер счета' name="contragent_account" value='{contr_account}'/></p>
+            <p class="change">Наименование банка:</p>
+            <p class="change"><input type="text" size="30" required placeholder='Имя банка' name="contragent_bankname" value='{contr_bankname}'/></p>
+            <p class="change">БИК банка:</p>
+            <p class="change"><input type="text" size="30" required placeholder='БИК Банка' name="contragent_bik" value='{contr_bik}'/></p>
+            <p class="change">Корр. счет банка:</p>
+            <p class="change"><input type="text" size="30" required placeholder='Корр. счет Банка' name="contragent_kor" value='{contr_kor}'/></p>
+            <p class="change">Информация о контрагенте:</p>
+            <p class="change"><textarea cols="30" rows="5"  name="contragent_information">{contr_information}</textarea></p>
+            <p><input type="submit" name="{button_to_control}" value="{button_name}"/></p> 
+            </br>
+        </form>
+        <p><input class="sea" type="button" onclick="history.back()" value="Назад"/></p>
+    </div>
+    <br class="spacer" />
+</div>
+<!-- END:body -->

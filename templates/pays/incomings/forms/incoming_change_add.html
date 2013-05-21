@@ -1,0 +1,24 @@
+<!-- BEGIN:body -->
+<body>
+<div id="body">
+    <div id="leftPan">
+        <form action="functions/controls.php" method="post">
+            <input type="hidden" name="{form_name}"/>       
+            <p class="change">Тип Прихода:</p>
+            <p class="change"><input {checked1} required type="radio" name="incoming_type" value="1"/>Коммунальное предприятие</p>
+            <p class="change"><input {checked2} required type="radio" name="incoming_type" value="2"/>Прочие</p>
+            <p class="change">Название для "Прочие"</p>
+            <p class="change"><input type="text" size="30" placeholder='Страховая выплата' name="incoming_type_name" value='{incoming_type_name}'/></p>                
+            <p class="change">Сумма Прихода:</p>
+            <p class="change"><input type="text" size="30" required placeholder='15200.50' pattern="\d+(.\d&#123;2&#125;)?" name="incoming_amount" value='{incoming_amount}'/></p>
+            <p class="change">Дата Прихода:</p>
+            <p class="change"><input type="text" size="30" required maxlength="10" placeholder='01.01.2012' pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" name="incoming_date" value='{incoming_date}'/></p>                     
+            </br>
+            <p><input type="submit" name="{button_to_control}" value="{button_name}"/></p> 
+        </form>
+        <p><input class="sea" type="button" onclick="history.back()" value="Назад"/></p>
+    </div>
+    <br class="spacer" />
+</div>
+<!-- END:body -->
+

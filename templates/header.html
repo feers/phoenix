@@ -1,0 +1,23 @@
+<!-- BEGIN:header -->
+<div id="loader"><span>Загрузка...</span></div>
+<div id="header">
+    <a href="/"><img src="image/logo.gif" alt="management" width="205" height="47" border="0" class="logo" title="management" />
+    </a> 
+    <h1>{title}</h1>
+    <ul class="top_link">
+    <li><a href="/" class="home"></a></li>
+    <li><a href="#" class="mem"></a></li>
+    <li><a href="mailto:feers@inbox.ru" class="email"></a></li>
+    </ul>
+    <ul class="add">
+    {FILE {phones}}
+    {FILE {auth}}
+    </ul>
+    {FILE {header_navi}}
+    <script>
+    <!-- BEGIN:error -->        
+        alert('{error_text}');
+    <!-- END:error -->   
+    </script>
+</div>
+<!-- END:header -->
