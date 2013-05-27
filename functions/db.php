@@ -1,5 +1,7 @@
 <?php
 function DataBaseConnection($query){
+    ini_set('display_errors',1);
+    error_reporting(E_ALL);
     mysql_connect("localhost", "root", "");
     mysql_select_db("phoenix");
     mysql_query("SET character_set_client = utf8");
