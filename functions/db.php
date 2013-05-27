@@ -1,7 +1,7 @@
 <?php
 function DataBaseConnection($query){
-    mysql_connect("localhost", "ph", "ymi8ex");
-    mysql_select_db("phoenix");
+    $link = mysql_connect("localhost", "ph", "ymi8ex");
+    mysql_select_db("phoenix",$link);
     mysql_query("SET character_set_client = utf8");
     mysql_query("SET character_set_connection = utf8");
     mysql_query("SET character_set_results = utf8");
@@ -12,7 +12,7 @@ function DataBaseConnection($query){
     
 function DBConn(){
     $link = mysql_connect("localhost", "ph", "ymi8ex");
-    mysql_select_db("phoenix");
+    mysql_select_db("phoenix",$link);
     mysql_query("SET character_set_client = utf8");
     mysql_query("SET character_set_connection = utf8");
     mysql_query("SET character_set_results = utf8");
