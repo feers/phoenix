@@ -1,4 +1,4 @@
-<? 
+<?php 
 require_once 'functions/logic_start.php';
     
     //Показ Новостей
