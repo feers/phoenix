@@ -1,6 +1,6 @@
 <?php
 function DataBaseConnection($query){
-    ini_set('display_errors',1);
+    //ini_set('display_errors',1);
     error_reporting(E_ALL);
     $link = mysql_connect("maki72.me", "ph", "ymi8ex");
     mysql_select_db("phoenix",$link);
